@@ -1,5 +1,6 @@
 from functools import lru_cache
-from pydantic_settings import BaseSettings, SettingsConfigDict, Field
+from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import Field
 
 class Settings(BaseSettings):
     # API Keys
