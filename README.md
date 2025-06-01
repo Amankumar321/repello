@@ -112,8 +112,8 @@ The agent breaks down complex queries into specific searches, gathers informatio
    ```
 
 5. Start the backend server:
-   ```bash
-  python run.py
+   ````bash
+   python run.py
    ```
 
 ### Frontend Setup
@@ -129,7 +129,7 @@ The agent breaks down complex queries into specific searches, gathers informatio
 
 3. Create .env file:
    ```
-   NEXT_PUBLIC_API_BASE_URL=http://localhost:8000/api
+   NEXT_PUBLIC_API_BASE_URL=http://localhost:8000/api/v1
    ```
 
 4. Start the development server:
