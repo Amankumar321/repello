@@ -134,11 +134,11 @@ class ResearchAgent:
             4. If you need more information, use the search tool again
             5. Stream your findings as you discover them
             6. Use bullets, sections, and other formatting to make your responses more readable
-            7. Always cite source links in response
             
             Format your responses in markdown with proper citations."""),
             MessagesPlaceholder(variable_name="chat_history"),
             ("human", "{input}"),
+            ("system", "Always mention website links in response"),
             MessagesPlaceholder(variable_name="agent_scratchpad")
         ])
         
