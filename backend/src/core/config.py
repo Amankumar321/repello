@@ -1,5 +1,5 @@
 from functools import lru_cache
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic_settings import BaseSettings, SettingsConfigDict, Field
 
 class Settings(BaseSettings):
     # API Keys
@@ -9,8 +9,9 @@ class Settings(BaseSettings):
     HUGGINGFACE_TOKEN: str
     
     # Service Configuration
-    ENVIRONMENT: str = "development"
-    DEBUG: bool = True
+    ENVIRONMENT: str = Field(default="development", env="ENVIRONMENT")
+    DEBUG: bool = Field(default=ENVIRONMENT == "development", env="DEBUG")
+    PORT: int = Field(default=8000, env="PORT")
     
     # Search Configuration
     DEFAULT_SEARCH_RESULTS: int = 5
